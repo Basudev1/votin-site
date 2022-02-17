@@ -9,6 +9,12 @@ var usersRouter = require("./routes/users");
 const auth = require("./routes/auth");
 var app = express();
 
+//MongoDb Connection Will be here if success then we will see  in it the terminal
+
+//Mongodb
+const connectToMongo = require("./db/config");
+connectToMongo();
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
